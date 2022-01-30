@@ -18,7 +18,7 @@ AddEventHandler('stashesaddtoconfig', function(coords, pin, id, distance)
         file:write("\n    Config.Stash[#Config.Stash + 1] = {")
         file:write("\n        StashEntry = "..coords..",")
         file:write("\n        RequiredPin = "..pin..",")
-        file:write("\n        ID = "..id..",")
+        file:write("\n        ID = 'sh_"..id.."',") --********************************
         file:write("\n        distance = "..distance..",")
         file:write("\n}")
         file:close()
