@@ -213,7 +213,9 @@ RegisterCommand('stashadd', function(source,args)
     local pin = args[1]
     local id = args[2]
     local distance = args[3]
-    TriggerCallback('stashesaddtoconfig', plycoords, pin, id, distance)
+		TriggerServerEvent('stashesaddtoconfig', plycoords, pin, id, distance) --**************************
+    --TriggerCallback('stashesaddtoconfig', plycoords, pin, id, distance) --**************************
+		
 end)
 
 -- Chat suggestion
